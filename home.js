@@ -59,4 +59,20 @@ clearButton.addEventListener("click", function () {
     document.getElementById("call-history-time").innerHTML = "";
 })
 
+// copy button 
+let copyButtons = document.querySelectorAll(".copy-btn");
+for(i=0; i< copyButtons.length; i++){
+    let copyButton = copyButtons[i];
+    
+    copyButton.addEventListener("click", function(event){
+        let totalCopy = parseInt(document.getElementById("total-copy").innerText)
+        totalCopy = totalCopy +1;
+        document.getElementById("total-copy").innerText = totalCopy;
+        let textToCopy = parseInt(event.target.closest(".card").querySelector('.service-number').textContent);
+        navigator.clipboard.writeText(textToCopy).then(() =>{
+            alert('Hotline number copied to clipboard!');
+        })
+    })
+}
+
 
