@@ -1,7 +1,7 @@
 # What is the difference between getElementById, getElementsByClassName, and querySelector/quetySelectorAll?
-Ans: getElementById: It is a DOM selector component. By this we can find one element with given Id. Id is unique, so this wil always return  one element. One element or tag can have only one Id. 
+## Ans: getElementById: It is a DOM selector component. By this we can find one element with given Id. Id is unique, so this wil always return  one element. One element or tag can have only one Id. 
 For example: 
-- <p id=”title”>hello</p>;
+<p id=”title”>hello</p>;
 <script> 
 let title = document.getElementById(“title”);
 Console.log(title);
@@ -29,5 +29,6 @@ Events propagation in the domain tree is called event bubbling. As an event (suc
 ## Ans 
 - preventDefault() means Stop default browser behavior. example: Event.preventDefault()
 - stopPropagation() means Stop event for bubbling up the DOM tree. example: event.stopPropagration 
+
 
 
